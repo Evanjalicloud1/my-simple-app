@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Install phase - none for static site"
+  build:
+    commands:
+      - echo "Packaging web files"
+      - mkdir -p output
+      - cp -r index.html output/
+artifacts:
+  files:
+    - '**/*'
+  base-directory: output
